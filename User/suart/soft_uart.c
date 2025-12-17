@@ -41,7 +41,7 @@ static uint8_t fifo_pop(uint8_t *data)
 
 
 
-void SoftUart_Tick(void)
+void SoftUart_TX_Tick(void)
 {
     if (!softuart_tx.busy)
         return;
@@ -83,12 +83,12 @@ void SoftUart_Tick(void)
 							softuart_tx.state = SOFTUART_START;
 							softuart_tx.busy  = 1;
 							/* 清零计数器，启动定时器 */
-							SOFTUART_TIM_RX_START();
+							SOFTUART_TIM_TX_START();
 					}
 					else
 					{
 							/* 无数据，关闭定时器 */
-							SOFTUART_TIM_RX_STOP();
+							SOFTUART_TIM_TX_STOP();
 					}
 					break;
         default:
@@ -113,7 +113,7 @@ void SoftUart_SendByte(uint8_t byte)
     SOFTUART_TX_HIGH();
 
     /* 清零计数器，启动定时器 */
-    SOFTUART_TIM_RX_START();
+    SOFTUART_TIM_TX_START();
 }
 
 void SoftUart_SendString(const char *str)
@@ -141,7 +141,7 @@ void SoftUart_SendBuffer(const uint8_t *buf, uint16_t len)
 }
 
 
-void SOFT_TX_EXIT(void)
+void SOFT_RX_EXIT(void)
 {
 /* 忙则忽略 */
         if (softuart_rx.busy)
@@ -203,9 +203,7 @@ void SoftUart_RX_Tick(void)
     switch (softuart_rx.state)
     {
         case SOFTUART_RX_START:
-            /* 已对齐到起始位中点，切换到 1bit 周期 */
-            TIM_SetAutoreload(TIM3, UART_BIT_US - 1);
-            TIM_SetCounter(TIM3, 0);
+            SOFTUART_TIM_RX_START();
 
             softuart_rx.state = SOFTUART_RX_DATA;
             break;
@@ -231,7 +229,7 @@ void SoftUart_RX_Tick(void)
             softuart_rx.busy  = 0;
             softuart_rx.state = SOFTUART_RX_IDLE;
 
-            TIM_Cmd(TIM3, DISABLE);
+            SOFTUART_TIM_RX_STOP();
             break;
 
         default:

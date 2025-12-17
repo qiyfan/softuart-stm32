@@ -1,7 +1,7 @@
 #include "soft_uart_drive_init.h"
 
-extern void SoftUart_Tick(void);
-extern void SOFT_TX_EXIT(void);
+extern void SoftUart_TX_Tick(void);
+extern void SOFT_RX_EXIT(void);
 extern void SoftUart_RX_Tick(void);
 
 void SoftUart_RX_GPIO_Init(void)
@@ -40,7 +40,7 @@ void EXTI15_10_IRQHandler(void)
     {
         EXTI_ClearITPendingBit(EXTI_Line10);
 				
-				SOFT_TX_EXIT();
+				SOFT_RX_EXIT();
         
     }
 }
@@ -110,7 +110,7 @@ void TIM2_IRQHandler(void)
         TIM_ClearITPendingBit(TIM2, TIM_IT_Update);
 
         /* 每个 bit 时间进一次中断 */
-        SoftUart_Tick();
+        SoftUart_TX_Tick();
     }
 }
 void TIM3_Init(uint32_t baudrate)
