@@ -44,6 +44,17 @@ void EXTI15_10_IRQHandler(void)
         
     }
 }
+void SOFTUART_TX_TOGGLE(void)
+{
+    if (GPIO_ReadOutputDataBit(GPIOA, GPIO_Pin_3))
+    {
+        GPIO_ResetBits(GPIOA, GPIO_Pin_3);   // 当前为高，拉低
+    }
+    else
+    {
+        GPIO_SetBits(GPIOA, GPIO_Pin_3);     // 当前为低，拉高
+    }
+}
 
 void DEBUG_USART_GPIO_Config(void)
 {
@@ -60,6 +71,9 @@ void DEBUG_USART_GPIO_Config(void)
     GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
     GPIO_Init(DEBUG_USART_TX_GPIO_PORT, &GPIO_InitStructure);
 	
+		//调试用
+		GPIO_InitStructure.GPIO_Pin   = GPIO_Pin_3;
+    GPIO_Init(DEBUG_USART_TX_GPIO_PORT, &GPIO_InitStructure);
 	    /* 3. 配置 PA10 为普通 GPIO 输入 */
 			SoftUart_RX_GPIO_Init();
 }
@@ -111,6 +125,7 @@ void TIM2_IRQHandler(void)
 
         /* 每个 bit 时间进一次中断 */
         SoftUart_TX_Tick();
+			
     }
 }
 void TIM3_Init(uint32_t baudrate)
@@ -155,5 +170,6 @@ void TIM3_IRQHandler(void)
 
         /* 每个 bit 时间进一次中断状态机 */
         SoftUart_RX_Tick();
+				SOFTUART_TX_TOGGLE();
     }
 }

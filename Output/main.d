@@ -38,5 +38,4 @@
 ..\..\output\main.o: D:\MDK\keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 ..\..\output\main.o: ..\..\User\suart\soft_uart.h
 ..\..\output\main.o: ..\..\User\suart\soft_uart_port.h
-..\..\output\main.o: ..\..\User\suart\soft_uart_port.h
 ..\..\output\main.o: ..\..\User\suart\soft_uart_drive_init.h

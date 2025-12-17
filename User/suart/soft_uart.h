@@ -67,4 +67,6 @@ void SoftUart_SendByte(uint8_t byte);
 void SoftUart_SendString(const char *str);
 void SoftUart_SendBuffer(const uint8_t *buf, uint16_t len);
 uint8_t SoftUart_ReadByte(uint8_t *byte);
+
+
 #endif

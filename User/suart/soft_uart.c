@@ -140,7 +140,7 @@ void SoftUart_SendBuffer(const uint8_t *buf, uint16_t len)
     }
 }
 
-
+extern void SOFTUART_TX_TOGGLE(void);
 void SOFT_RX_EXIT(void)
 {
 /* 忙则忽略 */
@@ -157,6 +157,7 @@ void SOFT_RX_EXIT(void)
 
             /* 定时器设置为 0.5 bit */
             SOFTUART_TIM_HALF_BIT();
+						SOFTUART_TX_TOGGLE();
         }
 }
 uint8_t SoftUart_RxFifoIsEmpty(void)
