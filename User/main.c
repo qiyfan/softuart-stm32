@@ -78,7 +78,7 @@ int main(void)
 	
 		delay_ms(1000);
 	while(1){
-		#if 1
+		#if 0
 		SoftUart_SendByte(0x78);
 		delay_ms(1000);
 		SoftUart_SendString("Hello Soft UART\r\n");
@@ -88,13 +88,13 @@ int main(void)
 		delay_ms(1000);
 		#endif
 		
-		#if 0
+		#if 1
 		if (SoftUart_ReadByte(&ch))
 		{
 				/* 收到一个字节 */
 				SoftUart_SendByte(ch);
 		}
-		delay_ms(2000);
+		delay_ms(100);
 		#endif
 	}
    

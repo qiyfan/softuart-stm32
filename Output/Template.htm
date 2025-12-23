@@ -3,7 +3,7 @@
 <title>Static Call Graph - [..\..\Output\Template.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image ..\..\Output\Template.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Wed Dec 17 23:49:00 2025
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060960: Last Updated: Tue Dec 23 18:55:58 2025
 <BR><P>
 <H3>Maximum Stack Usage =         88 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -506,7 +506,7 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SoftUart_RX_GPIO_Init
 </UL>
 
-<P><STRONG><a name="[69]"></a>SOFTUART_TIM_HALF_BIT</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, soft_uart_port.o(i.SOFTUART_TIM_HALF_BIT))
+<P><STRONG><a name="[69]"></a>SOFTUART_TIM_HALF_BIT</STRONG> (Thumb, 34 bytes, Stack size 8 bytes, soft_uart_port.o(i.SOFTUART_TIM_HALF_BIT))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = SOFTUART_TIM_HALF_BIT
 </UL>
 <BR>[Calls]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_SetCounter
@@ -516,7 +516,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SOFT_RX_EXIT
 </UL>
 
-<P><STRONG><a name="[6d]"></a>SOFTUART_TIM_RX_START</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, soft_uart_port.o(i.SOFTUART_TIM_RX_START))
+<P><STRONG><a name="[6d]"></a>SOFTUART_TIM_RX_START</STRONG> (Thumb, 34 bytes, Stack size 8 bytes, soft_uart_port.o(i.SOFTUART_TIM_RX_START))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = SOFTUART_TIM_RX_START
 </UL>
 <BR>[Calls]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_SetCounter
@@ -539,7 +539,7 @@ Global Symbols
 <LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Cmd
 </UL>
 <BR>[Called By]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SoftUart_TX_Tick
-<LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SoftUart_SendByte
+<LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SoftUart_SendByte
 </UL>
 
 <P><STRONG><a name="[70]"></a>SOFTUART_TIM_TX_STOP</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, soft_uart_port.o(i.SOFTUART_TIM_TX_STOP))
@@ -552,7 +552,7 @@ Global Symbols
 <BR><BR>[Calls]<UL><LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_SetBits
 </UL>
 <BR>[Called By]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SoftUart_TX_Tick
-<LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SoftUart_SendByte
+<LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SoftUart_SendByte
 </UL>
 
 <P><STRONG><a name="[73]"></a>SOFTUART_TX_LOW</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, soft_uart_port.o(i.SOFTUART_TX_LOW))
@@ -615,30 +615,24 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[27]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM3_IRQHandler
 </UL>
 
-<P><STRONG><a name="[7e]"></a>SoftUart_SendBuffer</STRONG> (Thumb, 34 bytes, Stack size 16 bytes, soft_uart.o(i.SoftUart_SendBuffer))
-<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = SoftUart_SendBuffer &rArr; SoftUart_SendByte &rArr; SOFTUART_TIM_TX_START
+<P><STRONG><a name="[7e]"></a>SoftUart_ReadByte</STRONG> (Thumb, 38 bytes, Stack size 4 bytes, soft_uart.o(i.SoftUart_ReadByte))
+<BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = SoftUart_ReadByte
 </UL>
-<BR>[Calls]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SoftUart_SendByte
+<BR>[Calls]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SoftUart_RxFifoIsEmpty
 </UL>
 <BR>[Called By]<UL><LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[7f]"></a>SoftUart_SendByte</STRONG> (Thumb, 38 bytes, Stack size 8 bytes, soft_uart.o(i.SoftUart_SendByte))
+<P><STRONG><a name="[7f]"></a>SoftUart_RxFifoIsEmpty</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, soft_uart.o(i.SoftUart_RxFifoIsEmpty))
+<BR><BR>[Called By]<UL><LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SoftUart_ReadByte
+</UL>
+
+<P><STRONG><a name="[80]"></a>SoftUart_SendByte</STRONG> (Thumb, 38 bytes, Stack size 8 bytes, soft_uart.o(i.SoftUart_SendByte))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = SoftUart_SendByte &rArr; SOFTUART_TIM_TX_START
 </UL>
 <BR>[Calls]<UL><LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SOFTUART_TX_HIGH
 <LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SOFTUART_TIM_TX_START
-<LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fifo_push
-</UL>
-<BR>[Called By]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SoftUart_SendString
-<LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SoftUart_SendBuffer
-<LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-</UL>
-
-<P><STRONG><a name="[81]"></a>SoftUart_SendString</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, soft_uart.o(i.SoftUart_SendString))
-<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = SoftUart_SendString &rArr; SoftUart_SendByte &rArr; SOFTUART_TIM_TX_START
-</UL>
-<BR>[Calls]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SoftUart_SendByte
+<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fifo_push
 </UL>
 <BR>[Called By]<UL><LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -678,7 +672,7 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f40xx.o(RESET)
 </UL>
-<P><STRONG><a name="[87]"></a>TIM2_Init</STRONG> (Thumb, 92 bytes, Stack size 24 bytes, soft_uart_drive_init.o(i.TIM2_Init))
+<P><STRONG><a name="[87]"></a>TIM2_Init</STRONG> (Thumb, 90 bytes, Stack size 24 bytes, soft_uart_drive_init.o(i.TIM2_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = TIM2_Init &rArr; NVIC_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_Init
@@ -700,7 +694,7 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f40xx.o(RESET)
 </UL>
-<P><STRONG><a name="[8c]"></a>TIM3_Init</STRONG> (Thumb, 90 bytes, Stack size 24 bytes, soft_uart_drive_init.o(i.TIM3_Init))
+<P><STRONG><a name="[8c]"></a>TIM3_Init</STRONG> (Thumb, 88 bytes, Stack size 24 bytes, soft_uart_drive_init.o(i.TIM3_Init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = TIM3_Init &rArr; NVIC_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_Init
@@ -798,14 +792,13 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[5c]"></a>main</STRONG> (Thumb, 82 bytes, Stack size 8 bytes, main.o(i.main))
+<P><STRONG><a name="[5c]"></a>main</STRONG> (Thumb, 58 bytes, Stack size 8 bytes, main.o(i.main))
 <BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = main &rArr; DEBUG_USART_GPIO_Config &rArr; SoftUart_RX_GPIO_Init &rArr; GPIO_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM3_Init
 <LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM2_Init
-<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SoftUart_SendString
-<LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SoftUart_SendByte
-<LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SoftUart_SendBuffer
+<LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SoftUart_SendByte
+<LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SoftUart_ReadByte
 <LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DEBUG_USART_GPIO_Config
 <LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_ms
 <LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Init
@@ -832,7 +825,7 @@ Local Symbols
 </UL>
 
 <P><STRONG><a name="[91]"></a>fifo_is_full</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, soft_uart.o(i.fifo_is_full))
-<BR><BR>[Called By]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fifo_push
+<BR><BR>[Called By]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fifo_push
 </UL>
 
 <P><STRONG><a name="[83]"></a>fifo_pop</STRONG> (Thumb, 38 bytes, Stack size 8 bytes, soft_uart.o(i.fifo_pop))
@@ -843,12 +836,12 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SoftUart_TX_Tick
 </UL>
 
-<P><STRONG><a name="[80]"></a>fifo_push</STRONG> (Thumb, 34 bytes, Stack size 8 bytes, soft_uart.o(i.fifo_push))
+<P><STRONG><a name="[81]"></a>fifo_push</STRONG> (Thumb, 34 bytes, Stack size 8 bytes, soft_uart.o(i.fifo_push))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = fifo_push
 </UL>
 <BR>[Calls]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fifo_is_full
 </UL>
-<BR>[Called By]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SoftUart_SendByte
+<BR>[Called By]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SoftUart_SendByte
 </UL>
 <P>
 <H3>

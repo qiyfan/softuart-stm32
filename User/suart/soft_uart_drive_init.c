@@ -80,7 +80,7 @@ void DEBUG_USART_GPIO_Config(void)
 
 uint32_t UART_BaudrateToPeriodUs(uint32_t baudrate)
 {
-    return 1000000 / baudrate;   // 单位：us
+    return 84000000 / baudrate;   // 单位
 }
 
 void TIM2_Init(uint32_t baudrate)
@@ -96,7 +96,7 @@ void TIM2_Init(uint32_t baudrate)
     /* 1MHz 计数频率（1us） */
     period_us = UART_BaudrateToPeriodUs(baudrate);
 
-    TIM_TimeBaseInitStruct.TIM_Prescaler     = 83;                  // 84MHz / (83+1) = 1MHz
+    TIM_TimeBaseInitStruct.TIM_Prescaler     = 0;                  // 84MHz / (1) = 84MHz
     TIM_TimeBaseInitStruct.TIM_CounterMode   = TIM_CounterMode_Up;
     TIM_TimeBaseInitStruct.TIM_Period        = period_us - 1;
     TIM_TimeBaseInitStruct.TIM_ClockDivision = TIM_CKD_DIV1;
@@ -141,7 +141,7 @@ void TIM3_Init(uint32_t baudrate)
     /* 1MHz 计数频率（1us） */
     period_us = UART_BaudrateToPeriodUs(baudrate);
 
-    TIM_TimeBaseInitStruct.TIM_Prescaler     = 83;                  // 84MHz / (83+1) = 1MHz
+    TIM_TimeBaseInitStruct.TIM_Prescaler     = 0;                  // 84MHz / (83+1) = 1MHz
     TIM_TimeBaseInitStruct.TIM_CounterMode   = TIM_CounterMode_Up;
     TIM_TimeBaseInitStruct.TIM_Period        = period_us - 1;
     TIM_TimeBaseInitStruct.TIM_ClockDivision = TIM_CKD_DIV1;

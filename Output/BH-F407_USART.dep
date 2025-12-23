@@ -1340,7 +1340,7 @@ I (..\..\Libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_can.h)(0x6594B1EF)
 I (..\..\Libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dac.h)(0x6594B1EF)
 I (..\..\Libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h)(0x6594B1EF)
 I (..\..\Libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_fsmc.h)(0x6594B1EF)
-F (..\..\User\main.c)(0x6942CCE3)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ..\..\Libraries\CMSIS\Device\ST\STM32F4xx\Include -I ..\..\Libraries\CMSIS\Include -I ..\..\Libraries\STM32F4xx_StdPeriph_Driver\inc -I ..\..\User -I ..\..\User\suart-ID:\MDK\Packs\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="536" -DSTM32F407xx -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx-o ..\..\output\main.o --omf_browse ..\..\output\main.crf --depend ..\..\output\main.d)
+F (..\..\User\main.c)(0x694A7502)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ..\..\Libraries\CMSIS\Device\ST\STM32F4xx\Include -I ..\..\Libraries\CMSIS\Include -I ..\..\Libraries\STM32F4xx_StdPeriph_Driver\inc -I ..\..\User -I ..\..\User\suart-ID:\MDK\Packs\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="536" -DSTM32F407xx -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx-o ..\..\output\main.o --omf_browse ..\..\output\main.crf --depend ..\..\output\main.d)
 I (..\..\Libraries\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h)(0x6594B1EF)
 I (..\..\Libraries\CMSIS\Include\core_cm4.h)(0x6594B1EF)
 I (D:\MDK\keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
@@ -1378,7 +1378,7 @@ I (..\..\Libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_fsmc.h)(0x6594B1EF)
 I (..\..\User\./usart/bsp_debug_usart.h)(0x6594B1EF)
 I (D:\MDK\keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
 I (..\..\User\suart\soft_uart.h)(0x6942C611)
-I (..\..\User\suart\soft_uart_port.h)(0x6942D0E9)
+I (..\..\User\suart\soft_uart_port.h)(0x694A753B)
 I (..\..\User\suart\soft_uart_drive_init.h)(0x6942C611)
 F (..\..\User\stm32f4xx_it.c)(0x69403514)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ..\..\Libraries\CMSIS\Device\ST\STM32F4xx\Include -I ..\..\Libraries\CMSIS\Include -I ..\..\Libraries\STM32F4xx_StdPeriph_Driver\inc -I ..\..\User -I ..\..\User\suart-ID:\MDK\Packs\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="536" -DSTM32F407xx -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx-o ..\..\output\stm32f4xx_it.o --omf_browse ..\..\output\stm32f4xx_it.crf --depend ..\..\output\stm32f4xx_it.d)
 I (..\..\User\stm32f4xx_it.h)(0x6594B1EF)
@@ -1457,13 +1457,13 @@ I (..\..\Libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_fsmc.h)(0x6594B1EF)
 I (D:\MDK\keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
 F (..\..\User\stm32f4xx_conf.h)(0x6594B1EF)()
 F (..\..\User\stm32f4xx_it.h)(0x6594B1EF)()
-F (..\..\User\suart\soft_uart_port.h)(0x6942D0E9)()
+F (..\..\User\suart\soft_uart_port.h)(0x694A753B)()
 F (..\..\User\suart\soft_uart.h)(0x6942C611)()
 F (..\..\User\suart\soft_uart.c)(0x6942D0C5)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ..\..\Libraries\CMSIS\Device\ST\STM32F4xx\Include -I ..\..\Libraries\CMSIS\Include -I ..\..\Libraries\STM32F4xx_StdPeriph_Driver\inc -I ..\..\User -I ..\..\User\suart-ID:\MDK\Packs\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="536" -DSTM32F407xx -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx-o ..\..\output\soft_uart.o --omf_browse ..\..\output\soft_uart.crf --depend ..\..\output\soft_uart.d)
 I (..\..\User\suart\soft_uart.h)(0x6942C611)
 I (D:\MDK\keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
 I (D:\MDK\keil_v5\ARM\ARMCC\include\stdio.h)(0x60252374)
-I (..\..\User\suart\soft_uart_port.h)(0x6942D0E9)
+I (..\..\User\suart\soft_uart_port.h)(0x694A753B)
 I (..\..\Libraries\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h)(0x6594B1EF)
 I (..\..\Libraries\CMSIS\Include\core_cm4.h)(0x6594B1EF)
 I (..\..\Libraries\CMSIS\Include\core_cmInstr.h)(0x6594B1EF)
@@ -1498,7 +1498,7 @@ I (..\..\Libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dac.h)(0x6594B1EF)
 I (..\..\Libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h)(0x6594B1EF)
 I (..\..\Libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_fsmc.h)(0x6594B1EF)
 F (..\..\User\suart\soft_uart_port.c)(0x6942CFE0)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ..\..\Libraries\CMSIS\Device\ST\STM32F4xx\Include -I ..\..\Libraries\CMSIS\Include -I ..\..\Libraries\STM32F4xx_StdPeriph_Driver\inc -I ..\..\User -I ..\..\User\suart-ID:\MDK\Packs\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="536" -DSTM32F407xx -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx-o ..\..\output\soft_uart_port.o --omf_browse ..\..\output\soft_uart_port.crf --depend ..\..\output\soft_uart_port.d)
-I (..\..\User\suart\soft_uart_port.h)(0x6942D0E9)
+I (..\..\User\suart\soft_uart_port.h)(0x694A753B)
 I (..\..\Libraries\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h)(0x6594B1EF)
 I (..\..\Libraries\CMSIS\Include\core_cm4.h)(0x6594B1EF)
 I (D:\MDK\keil_v5\ARM\ARMCC\include\stdint.h)(0x6025237E)
@@ -1533,7 +1533,7 @@ I (..\..\Libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_can.h)(0x6594B1EF)
 I (..\..\Libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dac.h)(0x6594B1EF)
 I (..\..\Libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_dcmi.h)(0x6594B1EF)
 I (..\..\Libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_fsmc.h)(0x6594B1EF)
-F (..\..\User\suart\soft_uart_drive_init.c)(0x6942CFE0)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ..\..\Libraries\CMSIS\Device\ST\STM32F4xx\Include -I ..\..\Libraries\CMSIS\Include -I ..\..\Libraries\STM32F4xx_StdPeriph_Driver\inc -I ..\..\User -I ..\..\User\suart-ID:\MDK\Packs\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="536" -DSTM32F407xx -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx-o ..\..\output\soft_uart_drive_init.o --omf_browse ..\..\output\soft_uart_drive_init.crf --depend ..\..\output\soft_uart_drive_init.d)
+F (..\..\User\suart\soft_uart_drive_init.c)(0x694A7502)(--c99 -c --cpu Cortex-M4.fp.sp -D__MICROLIB -g -O1 --apcs=interwork --split_sections -I ..\..\Libraries\CMSIS\Device\ST\STM32F4xx\Include -I ..\..\Libraries\CMSIS\Include -I ..\..\Libraries\STM32F4xx_StdPeriph_Driver\inc -I ..\..\User -I ..\..\User\suart-ID:\MDK\Packs\Keil\STM32F4xx_DFP\2.15.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="536" -DSTM32F407xx -DUSE_STDPERIPH_DRIVER -DSTM32F40_41xxx-o ..\..\output\soft_uart_drive_init.o --omf_browse ..\..\output\soft_uart_drive_init.crf --depend ..\..\output\soft_uart_drive_init.d)
 I (..\..\User\suart\soft_uart_drive_init.h)(0x6942C611)
 I (..\..\Libraries\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h)(0x6594B1EF)
 I (..\..\Libraries\CMSIS\Include\core_cm4.h)(0x6594B1EF)

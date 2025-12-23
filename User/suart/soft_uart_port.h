@@ -6,7 +6,7 @@
 
 
 #define SOFT_UART_baudrate 115200
-#define UART_BIT_US  1000000 / SOFT_UART_baudrate
+#define UART_BIT_US  84000000 / SOFT_UART_baudrate
 #define SOFTUART_RX_READ() \
     GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_10)
 
